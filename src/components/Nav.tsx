@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from 'next-intl';
 
 const links = [
     {
@@ -27,6 +28,7 @@ const links = [
 ]
 
 export default function Nav() {
+    const t = useTranslations('navbar')
     const pathname = usePathname()
     console.log(pathname)
     return (
@@ -39,7 +41,7 @@ export default function Nav() {
                         className={`${link.path === pathname && "text-accent border-b-2 border-accent"}
                         capitalize font-medium hover:text-accent transition-all`}
                     >
-                        {link.name}
+                        {t(link.name)}
                     </Link>
                 )
             })}

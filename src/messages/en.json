@@ -4,13 +4,28 @@
       "services": "Services",
       "resume": "Resume",
       "work": "Work",
-      "contact": "Contact"
+      "contact": "Contact",
+      "hire": "Hire me"
     },
     "home": {
       "role": "Software Developer",
       "greeting": "Hello, I'm",
       "description": "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.",
       "downloadCV": "Download CV"
+    },
+    "contact": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "workTogether": "Let's work together",
+      "workTogetherP": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae voluptas officia aliquid hic numquam temporibus libero.",
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "emailAddress": "Email address",
+      "phoneNumber": "Phone number",
+      "selectService": "Select a service",
+      "typeMessage": "Type your message here.",
+      "sendMessage": "Send Message"
     }
   }
   
