@@ -1,0 +1,16 @@
+{
+    "navbar": {
+      "home": "Início",
+      "services": "Serviços",
+      "resume": "Currículo",
+      "work": "Trabalho",
+      "contact": "Contato"
+    },
+    "home": {
+      "role": "Desenvolvedor de Software",
+      "greeting": "Olá, eu sou",
+      "description": "Sou especialista em criar experiências digitais elegantes e sou proficiente em várias linguagens de programação e tecnologias.",
+      "downloadCV": "Baixar CV"
+    }
+  }
+  

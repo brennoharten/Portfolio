@@ -1,0 +1,16 @@
+{
+    "navbar": {
+      "home": "Home",
+      "services": "Services",
+      "resume": "Resume",
+      "work": "Work",
+      "contact": "Contact"
+    },
+    "home": {
+      "role": "Software Developer",
+      "greeting": "Hello, I'm",
+      "description": "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.",
+      "downloadCV": "Download CV"
+    }
+  }
+  

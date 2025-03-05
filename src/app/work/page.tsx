@@ -50,7 +50,7 @@ const projects = [
 export default function page() {
     const [project, setProject] = useState(projects[0])
 
-    const handleSlideChange = (swiper) => {
+    const handleSlideChange = (swiper: any) => {
         // get current slide index
         const currentIndex = swiper.activeIndex;
         // update project state based on current slide index
