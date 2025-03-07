@@ -3,6 +3,7 @@
 import { BsArrowDownRight } from "react-icons/bs"
 import Link from "next/link"
 import { Description } from "@radix-ui/react-dialog"
+import { useTranslations } from 'next-intl';
 
 const services = [
     {
@@ -34,6 +35,7 @@ const services = [
 import { delay, easeIn, motion } from "framer-motion"
 
 export default function page() {
+    const t = useTranslations('services')
     return (
         <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
             <div className="container mx-auto">

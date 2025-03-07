@@ -4,6 +4,7 @@ import { Description } from "@radix-ui/react-dialog";
 import { FaJs, FaReact, FaNodeJs, FaDocker } from "react-icons/fa"
 import { SiDocker, SiDotnet, SiTailwindcss, SiNextdotjs, SiOpenai } from "react-icons/si"
 import { VscAzureDevops } from "react-icons/vsc";
+import { useTranslations } from 'next-intl';
 
 const about = {
     title: 'About me',
@@ -138,9 +139,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { easeIn, motion } from 'framer-motion'
-import { Item } from "@radix-ui/react-select";
 
 export default function page() {
+    const t = useTranslations('resume')
     return (
         <motion.div initial={{ opacity: 0 }} animate={{
             opacity: 1, transition: {

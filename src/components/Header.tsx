@@ -2,28 +2,34 @@
 
 import Link from "next/link"
 import { Button } from "./ui/button"
-
-//components
 import Nav from "./Nav"
 import MobileNav from "./MobileNav"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import setLanguageValue from "@/actions/set-language-action";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
-
-import { useTranslations } from 'next-intl';
-
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function Header() {
-    const [selectedLanguage, setSelectedLanguage] = useState("en");
+    // Obtenha o locale atual da aplicação
+    const currentLocale = useLocale();
+    
+    // Inicialize o estado com o valor do locale atual
+    const [selectedLanguage, setSelectedLanguage] = useState(currentLocale);
     const t = useTranslations('navbar');
+    
+    // Atualize o estado quando o locale mudar
+    useEffect(() => {
+        setSelectedLanguage(currentLocale);
+    }, [currentLocale]);
 
     // Function to handle language change
     const handleLanguageChange = (newValue: string) => {
         setSelectedLanguage(newValue);
         setLanguageValue(newValue);
     };
+
     return (
-        <header className="py-8 xl:py-12 text-white  ">
+        <header className="py-8 xl:py-12 text-white">
             <div className="container mx-auto flex justify-between items-center">
                 <Link href="/">
                     <h1 className="text-4xl font-semibold">
@@ -40,14 +46,16 @@ export default function Header() {
                     </div>
 
                     {/* mobile nav */}
-                    <div className="xl:hidden">
+                    <div className="xl:hidden mt-3">
                         <MobileNav />
                     </div>
                     {/* Language Dropdown using select */}
                     <div className="relative">
                         <Select value={selectedLanguage} onValueChange={handleLanguageChange}>
                             <SelectTrigger className="w-full gap-1 items-center text-accent hover:border-accent rounded-full">
-                                <SelectValue>{selectedLanguage}</SelectValue>
+                                <SelectValue>
+                                    {selectedLanguage === 'pt' ? 'Portuguese' : 'English'}
+                                </SelectValue>
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
@@ -56,11 +64,8 @@ export default function Header() {
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
-
-
                     </div>
                 </div>
-
             </div>
         </header>
     )

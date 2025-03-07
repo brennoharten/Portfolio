@@ -26,6 +26,15 @@
       "selectService": "Select a service",
       "typeMessage": "Type your message here.",
       "sendMessage": "Send Message"
+    },
+    "status": {
+      "experience": "Years of experience",
+      "projects": "Projects completed",
+      "technologies": "Thechnologies mastered",
+      "commits": "Code commits"
+    },
+    "services": {
+
     }
   }
   

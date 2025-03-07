@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci"
+import { useTranslations } from 'next-intl';
 
 
 const links = [
@@ -31,6 +32,7 @@ const links = [
 
 
 export default function MobileNav() {
+    const t = useTranslations('navbar')
     const pathname = usePathname()
     return (
         <Sheet>
@@ -47,7 +49,7 @@ export default function MobileNav() {
                 </div>
                 <nav className="flex flex-col justify-center items-center gap-8">
                     {links.map((link, index) => {
-                        return <Link href={link.path} key={index} className={`${link.path === pathname && "text-accent border-b-2 border-accent"} text-xl capitalize hover:text-accent trasition-all`}>{link.name}</Link>
+                        return <Link href={link.path} key={index} className={`${link.path === pathname && "text-accent border-b-2 border-accent"} text-xl capitalize hover:text-accent trasition-all`}>{t(link.name)}</Link>
                     })}
                 </nav>
             </SheetContent>

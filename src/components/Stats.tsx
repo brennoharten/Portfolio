@@ -1,27 +1,29 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import CountUp from "react-countup"
 
 const stats = [
     {
-        num: 12,
-        text: "Years of experience"
+        num: 6,
+        text: "experience"
     },
     {
-        num: 26,
-        text: "Projects completed"
+        num: 21,
+        text: "projects"
     },
     {
         num: 8,
-        text: "Thechnologies mastered"
+        text: "technologies"
     },
     {
-        num: 500,
-        text: "Code commits"
+        num: 300,
+        text: "commits"
     },
 ]
 
 export default function Stats() {
+    const t = useTranslations('status')
     return (
         <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
             <div className="container mx-auto">
@@ -32,7 +34,7 @@ export default function Stats() {
                             xl:text-6xl font-extrabold"/>
                             <p className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
                                 } leading-snug text-white/80`
-                            }>{item.text}</p>
+                            }>{t(item.text)}</p>
                         </div>
                     })}
                 </div>

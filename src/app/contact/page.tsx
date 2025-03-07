@@ -69,7 +69,7 @@ export default function page() {
                             {/* text area */}
                             <Textarea className="h-[200px]" placeholder={t('typeMessage')}/>
                             {/* btn */}
-                            <Button size="sm" className="max-w-40">Send Message</Button>
+                            <Button size="sm" className="max-w-40">{t('sendMessage')}</Button>
                         </form>
                     </div>
                     {/* info */}
