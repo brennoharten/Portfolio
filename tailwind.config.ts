@@ -25,10 +25,10 @@ const config: Config = {
 		},
 		extend: {
 			colors: {
-				primary: "#1c1c22",
+				primary: "#0F1A42",
 				accent: {
-					DEFAULT: "#00ff99",  
-					hover: "#00e187",  
+					DEFAULT: "#FDB813",  
+					hover: "#FF9966",  
 				},
 				background: "var(--background)",
 				foreground: "var(--foreground)",

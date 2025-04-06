@@ -16,22 +16,28 @@ export default function Photo() {
             }}>
                 {/* image */}
                 <motion.div
-                    initial={{ opacity: 0 }} animate={{
+                    initial={{ opacity: 0 }}
+                    animate={{
                         opacity: 1,
                         transition: {
-                            delay: 2.4, duration:
-                                0.4, ease: "easeInOut"
+                            delay: 2.4,
+                            duration: 0.4,
+                            ease: "easeInOut",
                         },
                     }}
-                    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute flex items-center justify-center">
-                    <div className="w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] relative">
+                    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] absolute flex items-center justify-center"
+                >
+                    <div className="relative w-[200px] h-[200px] xl:w-[380px] xl:h-[380px]">
+                        <div className="absolute inset-0 rounded-full bg-[#0F1A42] z-0" />
                         <Image
                             src="/assets/photo.png"
                             priority
                             quality={100}
                             fill
                             alt=""
-                            className="object-contain w-full h-full"
+                            className="object-contain w-full h-full z-10
+                            [mask-image:radial-gradient(circle,_rgba(0,0,0,1)_60%,_rgba(0,0,0,0)_100%)] 
+                            [mask-composite:exclude] mix-blend-lighten"
                         />
                     </div>
                 </motion.div>
@@ -41,7 +47,7 @@ export default function Photo() {
                     viewBox="0 0 506 506"
                     xmlns="http://ww.3.org/2000/svg"
                 >
-                    <motion.circle cx="253" cy="253" r="250" stroke="#00ff99" strokeWidth="4"
+                    <motion.circle cx="253" cy="253" r="250" stroke="#FDB813" strokeWidth="4"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         initial={{ strokeDasharray: "24 10 0 0" }}

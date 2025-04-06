@@ -138,7 +138,7 @@ const skills = {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import { easeIn, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export default function page() {
     const t = useTranslations('resume')
