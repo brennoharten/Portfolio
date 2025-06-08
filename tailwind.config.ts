@@ -27,9 +27,10 @@ const config: Config = {
 			colors: {
 				primary: "#0F1A42",
 				accent: {
-					DEFAULT: "#FDB813",  
+					DEFAULT: "#e58f2b",  
 					hover: "#FF9966",  
 				},
+				green: "#1f4c55",
 				background: "var(--background)",
 				foreground: "var(--foreground)",
 			},
